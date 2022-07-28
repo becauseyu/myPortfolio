@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../_css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel=stylesheet type="text/css" href="../_css/head.css">
+    <link rel="stylesheet" href="../magic/magic.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./1658384861.ico" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../_js/jquery.min.js"></script>
+    <script src="../_js/popper.min.js"></script>
+    <script src="../_js/bootstrap.min.js"></script>
+    <style>
+        .index {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(to right,
+                    #8EB4E3 0%,
+                    #8EB4E3 50%,
+                    #FBC65C 50%,
+                    #FBC65C 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            position: absolute;
+
+        }
+
+        .logo {
+            z-index: 999;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .fd {
+            position: absolute;
+            z-index: 101;
+            background: white;
+            width: 50%;
+            left: 50%;
+            top: 0px;
+            height: 100%;
+            opacity: 0.5;
+        }
+
+        .fd:hover {
+            opacity: 0;
+        }
+
+        .sp {
+            position: absolute;
+            z-index: 101;
+            background: white;
+            width: 50%;
+            right: 50%;
+            top: 0px;
+            height: 100%;
+            opacity: 0.5;
+        }
+
+        .sp:hover {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row"></div>
+    <a href="./sp_idx.html">
+        <div class="sp "></div>
+    </a>
+    <a href="./fd_idx.html">
+        <div class="fd "></div>
+    </a>
+    <div class="index "><img src="../AI/LOGO.png" height="300vh" alt=""></div>
+    <img class="logo" src="../AI/LOGO.png" height="300vh">
+
+
+</body>
+
+</html>
