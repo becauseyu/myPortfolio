@@ -1,0 +1,126 @@
+/*------------------------Blank_area------------------------*/
+#blank_area{
+    height:200px;
+    width: 100%;
+    background-color: white;
+}
+
+.fixed-nav #blank_area{
+    height:180px;
+}
+
+#content{
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.buycarList{
+    border: 2px solid gray;
+    width: 100%;
+    margin: 0 auto;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+}
+.buycarList img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.buycarList thead{
+    color: rgb(36, 127, 180);
+    font-size: 25px;
+}
+
+.buycarList tbody{
+    color: rgb(244, 143, 255);
+    font-size: 20px;
+}
+
+.buycarList tfoot{
+    color: rgb(116, 135, 255);
+    font-size: 30px;
+}
+
+.buycarList th{
+    border: 1px solid gray;
+    line-height: 40px;
+}
+
+.goodsCount{
+    background-color: rgb(253, 209, 217);
+    border: 1px solid salmon;
+    height: 40px;
+}
+
+.removeGoods{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    line-height: 25px;
+}
+
+#bottom_content{
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+#bottom_content th{
+    width: 50%;
+}
+
+.orderData{
+    border: 2px solid gray;
+    width: 100%;
+    /* margin: 0 auto; */
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    /* background-color: aqua; */
+
+}
+
+.orderData tr{
+    width: 100%;
+}
+
+.orderData th{
+    /* width: 300px; */
+    height: 40px;
+}
+
+.orderData input{
+    background-color: rgb(253, 209, 217);
+    border: 1px solid gray;
+    margin: 5px;
+    height: 40px;
+    width: 200px;
+   
+}
+
+.orderData select{
+    height: 40px;
+    width: 200px;
+    margin: 5px;
+
+}
+
+#face_select{
+    display: none;
+}
+#del_address{
+    display: none;
+}
+
+#pay_cash{
+    display: none;
+}
+
+#order_submit{
+    font-size: 20px;
+    line-height: 40px;
+    /* border: 1px solid gray; */
+    margin: 19px;
+    float: right;
+    background-color: #53ff31;
+    color: black;
+}

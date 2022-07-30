@@ -1,0 +1,464 @@
+/*-----------------------All--------------------------*/
+.sm_icon{
+    height: 30px;
+    width: 30px;
+}
+
+.memo{
+font-size: 14px;
+color: red;
+}
+.notice{
+    color: red;
+    font-weight: bold;
+}
+
+.important{
+    background-color: yellow;
+    color: green;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.label{
+    border: 1px gray;
+    color: rgb(134, 211, 255);
+
+}
+
+.out_title_pay{
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(134, 211, 255) ;
+}
+
+.out_title_del{
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(255, 134, 249) ;
+}
+
+.ntw{
+    background: #ff0051;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    
+}
+
+.next_title{
+    text-align: left;
+    color: rgb(89, 16, 191);
+    font-size: 20px;
+}
+
+
+/*------------------------Blank_area------------------------*/
+#blank_area {
+    height: 200px;
+    width: 100%;
+    background-color: white;
+}
+
+.fixed-nav #blank_area {
+    height: 180px;
+}
+
+/*------------------------payment area------------------------*/
+#content {
+    width: 100%;
+    /* background-color: blueviolet; */
+    text-align: center;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content_area {
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: rgb(91, 165, 42); */
+    min-height: 500px
+}
+
+.payment_method {
+    background-color: rgb(255, 255, 255);
+    width: 28%;
+    float: left;
+    margin: 30px;
+    height: 400px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 5px 8px rgb(86, 139, 171);
+    text-align: center;
+}
+
+.payment_method_div {
+    /* background-color: #ff3f9c; */
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.payment_method p {
+    /* background-color: blue; */
+    position: relative;
+}
+
+.payment_method img {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    transition: width 1s
+}
+
+
+.pay_content {
+    margin-top: 10px;
+    /* background-color: red; */
+}
+
+.pay_btn {
+    /* margin-top: 50px;
+    width: 80%;
+    height: 20%;
+    font-size: 50px; */
+    background-color: rgb(244, 143, 255);
+    color: white;
+    border: 3px solid #ff3f9c;
+}
+
+.pay_btn:hover {
+    background-color: #ff3f9c;
+    color: rgb(244, 143, 255);
+    border: 3px solid white;
+
+}
+
+#pay_cash {
+    transition: width 1s;
+}
+
+
+
+/*-------------------payment area change------------------*/
+
+.payment_method_bigdiv {
+    /* background-color: aqua; */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.payment_method_bigdiv img {
+    width:350px;
+    height: 350px;
+    float: left;
+    margin-left: 20px;
+}
+
+.payment_method_bigdiv div {
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 40px;
+    /* background: #ff3f9c; */
+
+}
+
+.payment_method_bigdiv p{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+.payment_method_bigdiv div th {
+    border: 1px solid rgb(94, 91, 255);
+   
+}
+
+.payment_method_bigdiv div th img{
+    width:260px;
+    height: 150px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+
+.payment_method_bigdiv input {
+    margin-left: -50px;
+    margin-top: 350px;
+    
+}
+
+/*-------------------CASH BIG DIV------------------*/
+
+#pay_cash_bigdiv table{
+    text-align: left;
+    color: gray;
+    font-size: 18px;
+
+}
+
+.black_cat{
+    background-color:rgb(0, 128, 90);
+    color: yellow;
+}
+
+.tayuanStation{
+    color: rgb(193, 60, 193);
+}
+
+.beitubOffice{
+    color: rgb(48, 85, 220);
+}
+
+/*-----------------TRANSFER BIG DIV------------------*/
+
+#pay_transfer_bigdiv div th{
+    width: 400px;
+}
+
+/*-----------------LINEPAYBIG DIV------------------*/
+.linepay{
+    background-color: #00c300;
+    color: white;
+    border: 2px solid gray;
+}
+#pay_linepay_bigdiv div table th{
+    width: 200px;
+}
+
+
+#pay_linepay_bigdiv div table img{
+    width: 150px;
+    height: 150px;
+}
+/*-----------------------js class-----------------------*/
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*-----------------------DELIVER AREA--------------------------*/
+
+.deliver_method {
+    /* background-color: rgb(168, 0, 0); */
+    width: 44.5%;
+    float: left;
+    margin: 30px;
+    height: 400px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    box-shadow: 5px 8px rgb(197, 100, 136);
+    text-align: center;
+}
+
+.deliver_method_div {
+    /* background-color: #ff3f9c; */
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.deliver_method p {
+    /* background-color: blue; */
+    position: relative;
+}
+
+.deliver_method img {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    transition: width 1s
+}
+
+.deliver_method_bigdiv {
+    /* background-color: aqua; */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.deliver_method_bigdiv img {
+    width:350px;
+    height: 350px;
+    float: left;
+    margin-left: 20px;
+}
+
+.deliver_method_bigdiv div {
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 40px;
+    /* background: #ff3f9c; */
+
+}
+
+.deliver_method_bigdiv p{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+.deliver_method_bigdiv div th {
+    border: 1px solid rgb(94, 91, 255);
+   
+}
+
+.deliver_method_bigdiv div th img{
+    width:260px;
+    height: 150px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+
+.deliver_method_bigdiv input {
+    margin-left: -50px;
+    margin-top: 350px;
+    
+}
+
+
+.del_content {
+    margin-top: 10px;
+    /* background-color: red; */
+}
+
+.del_btn {
+    /* margin-top: 50px;
+    width: 80%;
+    height: 20%;
+    font-size: 50px; */
+    background-color: rgb(143, 180, 255);
+    color: white;
+    border: 3px solid #3f45ff;
+}
+
+.del_btn:hover {
+    background-color: #3f45ff;
+    color: rgb(143, 180, 255);
+    border: 3px solid white;
+
+}
+
+#del_face {
+    transition: width 1s;
+}
+/*-------------------payment area change------------------*/
+
+.deliver_method_bigdiv {
+    /* background-color: aqua; */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.deliver_method_bigdiv img {
+    width:350px;
+    height: 350px;
+    float: left;
+    margin-left: 20px;
+}
+
+.deliver_method_bigdiv div {
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 40px;
+    /* background: #ff3f9c; */
+
+}
+
+.deliver_method_bigdiv p{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+.deliver_method_bigdiv div th {
+    border: 1px solid rgb(94, 91, 255);
+   
+}
+
+.deliver_method_bigdiv div th img{
+    width:260px;
+    height: 150px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+
+.deliver_method_bigdiv input {
+    margin-left: -50px;
+    margin-top: 350px;
+    
+}
+
+#del_del_bigdiv th{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    color:rgb(0, 128, 90);
+
+}
+
+/*-----------------------op_cash--------------------------*/
+.op_cash {
+    width: 100%;
+}
+
+.op_cash #pay_cash_bigdiv {
+    animation: fadein 6s;
+}
+
+.op_cash #pay_transfer_bigdiv {
+    animation: fadein 6s;
+}
+
+.op_cash #pay_linepay_bigdiv {
+    animation: fadein 6s;
+}
+
+.op_cash #del_face_bigdiv {
+    animation: fadein 6s;
+}
+
+.op_cash #del_del_bigdiv {
+    animation: fadein 6s;
+}
+
+

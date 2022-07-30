@@ -1,0 +1,485 @@
+/*初始預設設定*/
+ul {
+    /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.flaicon{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+.title{
+    font-size: 25px;
+    font-family: monospace, Tahoma, Verdana, sans-serif;
+    color: rgb(220, 28, 241);
+   
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 25px;
+    /* margin-bottom: -25px; */
+}
+
+/*=========== Big Logo ================== */
+header{
+    background-color: white;
+    width: 100%;
+}
+#big_logo{
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+
+}
+/*=========== header_navbar ================== */
+
+#header {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    display: block;
+    clear: both;
+    content: "";
+    background-color: rgb(255, 255, 255, 0.9);
+}
+.fixed-nav #header{
+    position: fixed;
+}
+
+#logo {
+    max-width: 0;
+    overflow: hidden; /*overflow:代表超過width的東西顯示狀態，此為隱藏*/
+    float: left;
+    /*float:與position的用法類似，但不會覆蓋下面塗層的東西。*/
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.fixed-nav #logo{
+    max-width: 120px;
+    top: 2px;
+}
+
+.navbar {
+    float: left;
+    height: 150px;
+    top:50px;
+    left: 30px;
+    z-index: 30;
+}
+
+.fixed-nav .navbar{
+    top: 50px;
+    height: 0px;
+
+}
+
+.navbar ul ul li {
+    background-color: white;
+}
+
+.navbar ul li {
+    margin: 10px;
+    padding: 10px;
+    color: rgb(244, 143, 255);
+}
+
+.nav_link a {
+    text-decoration: none;
+    /*去除超連結的底線*/
+    color: inherit;
+    /*inherit:屬性應從其父元素繼承其值，故此處代表超連結的顏色遵從nav_link*/
+    font-size: 16px;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+    margin: -10px;
+    display: block;
+    /*dispaly:表文字的顯示方式。  block:每個超連結都各成一個區域，預設為由上往下堆疊*/
+    padding: 0 10px;
+    line-height: 40px;
+    /*line-height:行高*/
+    
+    
+
+}
+
+.nav_link a:hover {
+    background-color: rgb(198, 219, 255);
+    color: rgb(255, 255, 255);
+}
+
+.nav_link ul {
+    position: absolute;
+    z-index: 40;
+    /*影響靠近眼睛的距離，讓次選單在上一層，才可作用left/top*/
+    left: -10px;
+    top: 100%;
+    min-width: 100px;
+    /*固定最小寬度，避免因為字數而過度影響寬度*/
+    list-style-type: none;
+    /*list_style_type:清單圖標樣式  none:無樣式*/
+    display: none;
+    /*隱藏下層選單*/
+    background-color: white;
+    border: 1PX solid gray;
+}
+
+.nav_link ul a {
+    text-decoration: none;
+    /*去除超連結的底線*/
+    color: inherit;
+    /*inherit:屬性應從其父元素繼承其值，故此處代表超連結的顏色遵從nav_link*/
+    font-size: 14px;
+    color: rgb(220, 28, 241);
+    
+}
+
+.nav_link ul li {
+    border-bottom: #ccc 1px solid;
+}
+
+.nav_link li:hover>ul {
+    /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+
+.nav_link ul li:last-child {
+    border-bottom: none;
+}
+
+.nav_link {
+    display: flex;
+    /*flex:屬性為彈性，多用於在不同設備上螢幕尺寸改變時，也能靈活彈性地維持條件*/
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*當螢幕大小被改變時，不換行*/
+}
+
+.nav_link li {
+    position: relative;
+    white-space: nowrap;
+    /*whitespace:空白部分的呈現。  nowrap:當螢幕寬度改變時，不換行，*/
+}
+/*=========== right_navbar ================== */
+.right_navbar {
+    float: right;
+    top: 100px;
+    right: 10px;
+    position: relative;
+    height: 60px;
+    z-index: 30;
+}
+
+.fixed-nav .right_navbar{
+    top: 5px;
+}
+
+.message {
+    float: left;
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+
+#right_icon_message{
+    cursor:pointer;
+
+}
+
+.buy_list {
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+  .cartQuantity{
+    position:absolute;
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right:30px;
+    top:-8px;
+    background-color: pink;
+  }
+
+.search {
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+
+}
+
+#search_text {
+    display: none;
+    transform: hover;
+}
+
+#search_text:hover {
+    display: inline-block;
+    margin-top: -3px;
+
+
+}
+
+#right_icon{
+    color: rgb(134, 211, 255);
+    font-size: 20px
+}
+#right_icon_message{
+    color: rgb(134, 211, 255);
+    font-size: 20px }
+
+#right_icon:hover{
+    color: rgb(36, 127, 180);
+    font-size: 20px
+}
+
+#right_icon_message:hover{
+    color: rgb(36, 127, 180);
+    font-size: 20px
+}
+
+/*  ======== slide_buycart  ==================*/
+
+#slide_buycart{
+    max-height: 80%;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top:370px;
+    right: 0;
+    z-index: 120;
+    border-radius: 10px;
+    border: 1px solid gray;
+    visibility: hidden;
+    /* overflow: scroll; */
+
+}
+.fixed-nav #slide_buycart{
+    top:150px;
+    right: 0;
+    position: fixed;
+}
+
+.fa-circle-xmark{
+    font-size:30px;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    color: white;
+}
+
+.fa-solid:hover{
+    color:gray;
+}
+
+
+
+#slide_buycart_title{
+    font-size: 20px;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(153, 190, 255);
+    padding: 5px;
+}
+
+#slide_buycart_content{
+    text-align: center;
+    height: 200px;
+    overflow: scroll;
+}
+
+.slide_buycart_total{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+}
+#slide_buycart_bottom{
+    text-align: center;
+}
+
+#slide_buycart_bottom_btn{
+    margin: 10px;
+    background-color: rgb(244, 143, 255) ;
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    letter-spacing:5px;
+    color: white;
+    padding: 5px;
+
+} 
+
+
+/*  ========== addGoods class =====================*/
+.slide_buycart_image{
+    width: 60%;
+    height: 60%;
+    margin: 8px;
+}
+
+.slide_buycart_goodsTitle{
+    color:rgb(023,156, 255) ;
+}
+
+.slide_buycart_count{
+    margin: 5px;
+    top: 5px;
+    padding: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+.delete_goods{
+    background-color: red;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/*  ======== dialog  ==================*/
+
+input {
+    padding: 5px 15px;
+    background: #ccc;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+} 
+
+
+#opener {
+    background-color: wheat;
+    color: blue;
+    border: 1px solid gray;
+}
+
+.ui-widget-header.ui-dialog-titlebar {
+    /*設定dialog的標題樣式*/
+    background: rgb(244, 143, 255);
+    border: 1px solid gray;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.yescls  {
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 100px;
+    background: #53ff31!important;
+}
+
+.cancelcls {
+    font-size: 15px;
+    color: #FFFFFF;
+    width: 100px;
+    background: #e84343!important;
+}
+
+.con_title {
+    color: rgb(68, 111, 240);
+}
+
+.necessary {
+    color: red;
+    font-size: 6px;
+}
+
+#type_id {
+    width: 60%;
+    display: none;
+}
+
+.focus:focus {
+    background-color: rgb(209, 242, 255);
+}
+
+.dialog_textcls{
+    background-color: rgb(235, 235, 235);
+}
+
+
+/*  ======== footer  =====================*/
+.footer{
+    /* background-color: red; */
+    width: 100%;
+    /* height: 300px; */
+    position: relative;
+    top: 100px;
+    border-top: 1px solid rgb(187, 187, 187);
+    text-align: center;
+}
+
+.f_title{
+    font-size: 50px;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+#title_1{
+color:rgb(244, 143, 255) ;
+font-family:  Courier New, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title_2{
+color: rgb(023,156, 255);
+font-family:  Courier New, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.fa-brands:hover{
+    opacity: 0.5;
+
+
+}
+
+.fa-facebook-square{
+    font-size: 60px;
+    color: #1877f2;
+    margin: 10px;
+    
+}
+.fa-line{
+    font-size: 60px;
+    color: #00c300;
+    margin: 10px;
+}
+.fa-instagram-square{
+    font-size: 60px;
+    color: #833ab4;
+    margin: 10px;
+}
+
+/*  ======== author  =====================*/

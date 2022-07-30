@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hsieh Hsieh Brownie|布朗尼專賣</title>
+    <script src="https://kit.fontawesome.com/587cbd6750.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive_main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive_index.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="./_js/jquery.min.js"></script>
+    <script src="./_js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="./_js/main.js"></script>
+
+</head>
+
+<body>
+    <!--------------------------BIG LOGO area------------------------------------------------------------>
+
+    <header>
+        <a href="./index.html"><img id='big_logo' src="./img/LOGO.png" width="10%" height="10%"></a>
+    </header>
+    <!--------------------------Navbar area------------------------------------------------------------>
+    <div id="header">
+        <a href="./index.html"><img id='logo' src="./img/LOGO.png" width="120px" height="120px"></a>
+
+        <div class=navbar data-role="navbar">
+            <!--navbar:導覽列-->
+            <UL class="nav_link">
+                <li><a href="./about.html">|關於HsieHsieh|</a>
+                    <ul>
+                        <li><a href="./about.html#abouther">闆娘的故事|Story</a></li>
+                        <li><a href="./about.html#ingridient">嚴選材料|Ingridient</a></li>
+                    </ul>
+                </li>
+                <li><a href="./menu.html">&nbsp;&nbsp;&nbsp;|甜點項目|&nbsp;&nbsp;&nbsp;</a>
+
+                </li>
+                <li><a href="./order.html">&nbsp;|如何購買|&nbsp;</a>
+                    <ul>
+                        <li><a href='./order.html#payment_title'>付款方式|Payment</a></li>
+                        <li><a href='./order.html#deliver_title'>寄送方式|Deliver</a></li>
+                    </ul>
+                </li>
+                <li><a href="./notice.html">&nbsp;|注意事項|&nbsp;</a>
+                    <ul>
+                        <li><a href='./notice.html#save'>&nbsp;保存|Save</a></li>
+                        <li><a href='./notice.html#QandA'>&nbsp;訂單問題|Q&A</a></li>
+                    </ul>
+                </li>
+            </UL>
+
+        </div>
+        <!--------------------------Right-Navbar area------------------------------------------------------>
+        <div class="right_navbar">
+            <div class="message">
+                <i class="fa-solid fa-envelope" id="right_icon_message"></i>
+                <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+            </div>
+
+            <div class="buy_list">
+                <i class="fa-solid fa-cart-shopping" id="right_icon" onclick="openbuycar()"></i></a>
+                <span id='cartQuantity' class="cartQuantity text-white ">0</span>
+            </div>
+
+            <div class="search">
+                <form action="/action_page.php">
+                    <label for="search_text"><i class="fa-solid fa-magnifying-glass" id="right_icon"></i></label>
+                    <input id="search_text" class="input-field" type="text" placeholder="輸入想搜尋的產品" name="search">
+                    <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!--------------------------AD Change area------------------------------------------------------------>
+    <div id="ad_change" class="carousel slide" data-ride="carousel">
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/ADmarket.jpg" alt="ad-1">
+
+            </div>
+
+            <div class="carousel-item">
+                <img src="./img/ADnewflavor.jpg" alt="ad-2">
+
+
+            </div>
+            <div class="carousel-item">
+                <img src="./img/ADmothrtday.jpg" alt="ad-3">
+
+
+            </div>
+        </div>
+
+
+        <ol class="carousel-indicators">
+            <li data-target="#ad_change" data-slide-to="0" class="active"></li>
+            <li data-target="#ad_change" data-slide-to="1"></li>
+            <li data-target="#ad_change" data-slide-to="2"></li>
+        </ol>
+
+        <a class="carousel-control-prev" href="#ad_change" data-slide="prev" style="left:-80PX;top: 100px;">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#ad_change" data-slide="next" style="right:-80PX">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <!--------------------------------------Simple_Introduce area------------------------------------------------------------>
+    <div class="simple_introduce">
+        <table id="introduce_table" class="introduce_table">
+            <tr>
+                <th><img class="sp_in_img" src="./img/index/index_01.png"></th>
+                <th class="introduce_content" colspan="3">
+                    <p>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/knife_icon.gif">
+                        <span id="a">產品皆為手工製作，有裁切完美主義者，請斟酌下單</span>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/knife_icon.gif">
+                </p>
+                <p>
+                    <img style=" height: 30px ;width:30px;" src="./img/icon/knife_icon.gif">
+                        <span id="b">產品未添加防腐劑，請務必盡速於賞味期限食用完畢</span>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/knife_icon.gif">
+                    </p>
+
+                </th>
+                <th><img class="sp_in_img" src="./img/index/index_02.png"></th>
+            </tr>
+            <tr>
+                <td><img class="sp_in_img" src="./img/index/index_03.png"></th>
+                <td class="introduce_content" colspan="3">
+                    <p>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/mixer_icon.gif">
+                        <span id="a">過敏源資訊：　乳製品、麩質、堅果類、蛋 及其製品</span>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/mixer_icon.gif">
+                    </p>
+                    <p>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/mixer_icon.gif">
+                        <span id="b">產品多需冷藏，收到產品後若未馬上食用，請盡速冷藏</span>
+                        <img style="height: 30px ;width:30px;" src="./img/icon/mixer_icon.gif">
+                    </p>
+
+                </td>
+                <td><img class="sp_in_img" src="./img/index/index_04.png"></td>
+            </tr>
+        </table>
+    </div>
+    <!--------------------------------------Recommande area---------------------------------------------------------->
+
+    <div class="recommand_list">
+        <p class="title"><img class="flaicon" src="./img/favicon.png"></img>闆娘推薦|Recommand</i></p>
+        <div class="recommand_box">
+            <div class="recommand">
+                <img class="recommand_img" src="./img/menu/orign_basque.JPG" alt="brownie">
+                <div class="over_recommand">
+                    <div class="over">
+                        <div class="over_text">
+                            產品內容物：<br>
+                            -日本三溫糖<br>
+                            -法國奶油乳酪<br>
+                        </div>
+                    </div>
+                </div>
+                <span class="recommand_name">焦香巴斯克</span>
+                <i class="fas fa-shopping-basket buy_now" class="buy_now" onclick="addGoods(this)"></i><br>
+                <span class="recommand_price">(4吋)NT$<span id="price">280</span></span>
+            </div>
+            <div class="recommand">
+                <img class="recommand_img" src="./img/menu/vanilla_madeleine.JPG" alt="brownie">
+                <div class="over_recommand">
+                    <div class="over">
+                        <div class="over_text">
+                            產品內容物：<br>
+                            -日本三溫糖<br>
+                            -法國發酵無鹽奶油<br>
+                            -馬達加斯加波本香草莢<br>
+                        </div>
+                    </div>
+                </div>
+                <span class="recommand_name">香草瑪德蓮</span>
+                <i class="fas fa-shopping-basket buy_now" class="buy_now" onclick="addGoods(this)"></i><br>
+                <span class="recommand_price">(6入)NT$<span id="price">230</span></span>
+
+            </div>
+            <div class="recommand">
+                <img class="recommand_img" src="./img/menu/dbcocolate_fudge_cookie.JPG" alt="brownie">
+                <div class="over_recommand">
+                    <div class="over">
+                        <div class="over_text">
+                            產品內容物：<br>
+                            -法國發酵無鹽奶油<br>
+                            -比利時70%調溫苦甜巧克力<br>
+                            -比利時32%調溫白巧克力<br>
+                        </div>
+                    </div>
+                </div>
+                <span class="recommand_name">雙色軟餅乾</span>
+                <i class="fas fa-shopping-basket buy_now" class="buy_now" onclick="addGoods(this)"></i><br>
+                <span class="recommand_price">(單片)NT$<span id="price">45</span></span>
+
+            </div>
+            <div class="recommand">
+                <img class="recommand_img" src="./img/menu/orign_brownie.JPG" alt="brownie">
+                <div class="over_recommand">
+                    <div class="over">
+                        <div class="over_text">
+                            產品內容物：<br>
+                            -法國發酵無鹽奶油<br>
+                        </div>
+                    </div>
+                </div>
+                <span class="recommand_name">經典布朗尼</span>
+                <i class="fas fa-shopping-basket buy_now" class="buy_now" onclick="addGoods(this)"></i><br>
+                <span class="recommand_price">(8入)NT$<span id="price">230</span></span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------------------Footer area----------------------------------------------------------->
+
+
+    <div class="footer">
+
+        <p class="f_title"><span id="title_1">Hsieh</span> ♓ <span id="title_2">Hsieh</span></p>
+
+        <a href="https://www.facebook.com/HsiehHsieh-108923521593560/" target="_blank"><i
+                class="fa-brands fa-facebook-square"></i></a>
+        <a href="https://line.me/ti/g2/v8JH-3USf5DPGvZBbT0TdYdVOtuKndpJ_F11Qw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+            target="_blank"><i class="fa-brands fa-line"></i></a>
+        <a href="https://www.instagram.com/hsiehhsiehbrownie/" target="_blank"><i
+                class="fa-brands fa-instagram-square"></i></a>
+    <!---------------------------Sign area------------------------------------------------------------>
+
+        <footer> Copyright © 2022 HsiehHsiehBrownie. All rights reserved.Designed by MariaLin</footer>
+
+
+
+    </div>
+    <!----------------------------------Dialog area-------------------------------------------->
+
+
+    <div id="dialog_div" title="還有其他問題？歡迎來信詢問！" style="height:800px">
+        <!--title:設定dialog的標題-->
+        <p style='margin-bottom: 0px'><span class="con_title"><label for="id_text">請問如何稱呼您？</label></span><span
+                class="necessary"> *必填</span></p>
+        <input id="id_text" type="text" class="dialog_textcls focus" placeholder="王大明、李小姐……等" required>
+        <p style="margin-top:8px;margin-bottom: 0px;"><span class="con_title">請問如何聯繫您？</span><span class="necessary">
+                *必填</span></p>
+        <select id="connect">
+            <option value="co_select" disabled selected>請選擇聯絡方式</option>
+            <option value="co_line">LINE</option>
+            <option value="co_email">E-Mail</option>
+            <option value="co_facebook">Facebook</option>
+            <option value="co_tel">電話</option>
+            <option value="co_other">其他</option>
+        </select>
+        <input id="type_id" type="txet" class="dialog_textcls focus">
+        <p style="margin-top:8px;"><span class="con_title "><label for="type_content">請輸入您的問題？</label></span><span
+                class="necessary"> *必填</span>
+        </p>
+        <textarea class="focus" id="type_content" rows="5" name="type_content" cols="40"></textarea>
+        <!--typearae:可以自動換行的對話框。可用rows跟cols來設定寬高-->
+    </div>
+    <!-------------------------------Slide-Car area----------------------------------------------------------->
+    <div id="slide_buycart">
+        <i class="fa-solid fa-circle-xmark" onclick="closebuycar()"></i>
+        <div id='slide_buycart_title' class="slide_buycart_title">
+            　|您的購物清單|
+        </div>
+        <div id='slide_buycart_content' class="slide_buycart_content">
+            <nav id='slide_buycart_goods'></nav>
+        </div>
+
+        <div id='slide_buycart_bottom' class="slide_buycart_bottom">
+            <hr>
+            <p id="totalCount" class="hide">0</p>
+            <p class="slide_buycart_total">總計 NT$<span id="slide_buycart_accounttotal">0</span></p>
+            <a href="./buycar.html"><button id="slide_buycart_bottom_btn">立即結帳</button></a>
+
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

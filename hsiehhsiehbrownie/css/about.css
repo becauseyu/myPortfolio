@@ -1,0 +1,106 @@
+/*------------------------Blank_area------------------------*/
+#blank_area{
+    height:200px;
+    width: 100%;
+    background-color: white;
+}
+
+.fixed-nav #blank_area{
+    height:180px;
+}
+
+/*------------------------Parallax_area------------------------*/
+#content{
+    text-align: center;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../img/about/hsieh01.png");
+    /* Set a specific height */
+    min-height: 720px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax_4 {
+    /* The image used */
+    background-image: url("../img/about/hsieh02.png");
+    /* Set a specific height */
+    min-height: 720px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax_5 {
+    /* The image used */
+    background-image: url("../img/about/hsieh03.png");
+    /* Set a specific height */
+    min-height: 720px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.introduce_hsieh{
+    text-align: left;
+    width: 90%;
+    line-height: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+    
+
+
+}
+
+.introduce_hsieh h3{
+    color:rgb(255, 118, 248);
+}
+
+.introduce_hsieh p{
+    color:rgb(204, 65, 255) ;
+    font-size: 18px;
+}
+.ingridient_goods{
+    /* text-align:center; */
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 0 auto;
+}
+.ingridient_goods table{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ingridient_goods th{
+    border: 1px solid black;
+    width: 33%;
+
+}
+.ingridient_goods th p{
+    font-size: 20px;
+    color:rgb(35, 174, 255) ;
+}
+
+.ingridient_goods th{
+    font-size: 16px;
+    color: rgb(116, 135, 255);
+}
+
+.ingridient_img{
+    width: 100%;
+}

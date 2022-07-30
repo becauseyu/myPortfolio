@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何購買| Hsieh Hsieh Brownie|布朗尼專賣</title>
+    <script src="https://kit.fontawesome.com/587cbd6750.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive_main.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="stylesheet" href="./css/responsive_order.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="./_js/main.js"></script>
+    <script src="./_js/order.js"></script>
+
+</head>
+
+<body>
+    <!------------------------------Header area ------------------------------------------->
+    <header>
+        <a href="./index.html"><img id='big_logo' src="./img/LOGO.png" width="300 px" height="300px"></a>
+    </header>
+    <!------------------------------Navbar area ------------------------------------------->
+
+    <div id="header">
+        <a href="./index.html"><img id='logo' src="./img/LOGO.png" width="120px" height="120px"></a>
+
+        <div class=navbar data-role="navbar">
+            <!--navbar:導覽列-->
+            <UL class="nav_link">
+                <li><a href="./about.html">|關於HsieHsieh|</a>
+                    <ul>
+                        <li><a href="./about.html#abouther">闆娘的故事|Story</a></li>
+                        <li><a href="./about.html#ingridient">嚴選材料|Ingridient</a></li>
+                    </ul>
+                </li>
+                <li><a href="./menu.html">&nbsp;&nbsp;&nbsp;|甜點項目|&nbsp;&nbsp;&nbsp;</a>
+
+                </li>
+                <li><a href="./order.html">&nbsp;|如何購買|&nbsp;</a>
+                    <ul>
+                        <li><a href='#payment_title'>付款方式|Payment</a></li>
+                        <li><a href='#deliver_title'>寄送方式|Deliver</a></li>
+                    </ul>
+                </li>
+                <li><a href="./notice.html">&nbsp;|注意事項|&nbsp;</a>
+                    <ul>
+                        <li><a href='./notice.html#save'>&nbsp;保存|Save</a></li>
+                        <li><a href='./notice.html#QandA'>&nbsp;訂單問題|Q&A</a></li>
+                    </ul>
+                </li>
+            </UL>
+
+        </div>
+        <!------------------------------Right-navbar area ------------------------------------------->
+        <div class="right_navbar">
+            <div class="message">
+                <i class="fa-solid fa-envelope" id="right_icon_message"></i>
+                <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+            </div>
+
+            <div class="buy_list">
+                <i class="fa-solid fa-cart-shopping" id="right_icon" onclick="openbuycar()"></i></a>
+                <span id='cartQuantity' class="cartQuantity text-white ">0</span>
+            </div>
+
+            <div class="search">
+                <form action="/action_page.php">
+                    <label for="search_text"><i class="fa-solid fa-magnifying-glass" id="right_icon"></i></label>
+                    <input id="search_text" class="input-field" type="text" placeholder="輸入想搜尋的產品" name="search">
+                    <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="blank_area">
+
+    </div>
+
+    <div id="content">
+        <p id="payment_title" class="title"><img class="flaicon" src="./img/favicon.png"></img>|付款方式|</i></p>
+        <div id="payment_area" class="content_area">
+
+            <div id="pay_cash" class="payment_method">
+                <div id="pay_cash_div" class="payment_method_div">
+                    <img id="img_cash" src="./img/order/pay_cash.png"></img>
+                    <div id="cash_content" class="pay_content">
+                        <sapn class="out_title_pay">《現金》</sapn>
+                    </div>
+                    <input id="btn_cash" class="pay_btn" type="button" value="更多詳情" onclick="openCash()"></input>
+                </div>
+                <div id="pay_cash_bigdiv" class="payment_method_bigdiv">
+                    <img src="./img/order/pay_cash.png"></img>
+                    <div>
+                        <p><span class="important">此付款方式僅限面交可用！</span></p>
+                        <p><span class="notice">現金交易注意事項：</span></p>
+                        <table>
+                            <tr>
+                                <th>請以<span class="ntw">新台幣</span>進行交易＊</th>
+                            </tr>
+                            <tr>
+                                <th>由於工作室非實體店家型態，不一定會有足夠的零錢，請<span class="notice">盡量攜帶整數</span>進行交易。</th>
+                            </tr>
+                            <tr>
+                                <th>使用的貨幣若有<span class="notice">汙損</span>、<span class="notice">無法辨識</span>等問題，將不予收取。
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>若交易當下發現有使用偽鈔進行交易者，將<span class="notice">馬上報予</span>警察機關處理。</th>
+                            </tr>
+                            <tr>
+                                <th>單筆訂單若<span class="notice"
+                                        style="text-decoration:underline;">超過新台幣一萬元整</span>者，請盡可能以匯款或<span
+                                        class="linepay">LINEPAY</span>付款。</th>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <input id="btn_cash_big" class="pay_btn" type="button" value="返回" onclick="closeCash()"></input>
+                </div>
+                <div id="pay_transfer_bigdiv" class="payment_method_bigdiv">
+                    <img src="./img/order/pay_transfer.png"></img>
+                    <div>
+                        <p><span class="notice">可供匯款的銀行代碼與帳號：</span></p>
+                        <table>
+                            <tr>
+                                <th class="tayuanStation">國泰世華(013)</th>
+                                <th class="beitubOffice">0000-0000-0000</th>
+                            </tr>
+                            <tr>
+                                <th class="tayuanStation">玉山銀行(808)</th>
+                                <th class="beitubOffice">1111-1111-1111</th>
+                            </tr>
+                            <tr>
+                                <th class="tayuanStation">台新銀行(812)</th>
+                                <th class="beitubOffice">2222-2222-2222</th>
+                            </tr>
+                            <tr>
+                                <th class="tayuanStation">中國信託(822)</th>
+                                <th class="beitubOffice">3333-3333-3333</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span class="notice">＊請務必等訂單確認成立後，再進行匯款＊</span></th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span class="notice">＊匯款後請務必私訊闆娘您的大名、匯款金額與銀行後五碼＊</span></th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span class="notice">＊匯款後，闆娘查詢匯款資訊可能還需一至兩個工作天，敬請見諒＊</span></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <input id="btn_transfer_big" class="pay_btn" type="button" value="返回"
+                        onclick="closeTransfer()"></input>
+                </div>
+                <div id="pay_linepay_bigdiv" class="payment_method_bigdiv">
+                    <img src="./img/order/pay_linepay.png"></img>
+                    <div>
+                        <p><span class="notice">適用於已開通綁訂<span class="linepay">LINEPAY</span>轉帳功能的客人</span></p>
+                        <p><span class="notice">＊轉帳教學可參考：（引用至 來一張）</span>
+                            <a style="color: rgb(48, 85, 220)"
+                                href="https://www.alphacard.tw/blog/money-management/957-line-pay-money" target="_blank">https://www.alphacard.tw/blog/money-management/957-line-pay-money</a>
+                        </p>
+                        <table>
+                            <tr class="tayuanStation">
+                                <th><span>步驟一</span></th>
+                                <th><span>步驟二</span></th>
+                                <th><span>步驟三</span></th>
+                            </tr>
+                            <tr align="left" class="beitubOffice">
+                                <th>
+                                    掃描以下QRCODE加闆娘的LINE好友：
+
+
+                                </th>
+                                <th>
+                                    先傳訊息跟闆娘告知訂購大名、並等待回復
+
+
+                                </th>
+                                <th>
+                                    收到闆娘回覆並確認訂單金額後，即可轉帳
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="./img/order/line_01.jpg">
+                                </th>
+                                <th>
+                                    <img src="./img/order/line_02.jpg">
+                                </th>
+                                <th>
+                                    <img src="./img/order/line_03.jpg">
+                                </th>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                    <input id="btn_linepay_big" class="pay_btn" type="button" value="返回"
+                        onclick="closeLinepay()"></input>
+                </div>
+            </div>
+            <div id="pay_transfer" class="payment_method">
+                <div id="pay_transfer_div" class="payment_method_div">
+                    <img id="img_transfer" src="./img/order/pay_transfer.png"></img>
+                    <div id="transfer_content" class="pay_content">
+                        <sapn class="out_title_pay">《匯款》</sapn>
+                    </div>
+                    <input id="btn_transfer" class="pay_btn" type="button" value="更多詳情"
+                        onclick="openTransfer()"></input>
+                </div>
+            </div>
+            <div id="pay_linepay" class="payment_method">
+                <div id="pay_linepay_div" class="payment_method_div">
+                    <img id="img_linepay" src="./img/order/pay_linepay.png"></img>
+                    <div id="linepay_content" class="pay_content">
+                        <sapn class="out_title_pay">《LINE PAY》</sapn>
+                    </div>
+                    <input id="btn_linepay" class="pay_btn" type="button" value="更多詳情" onclick="openLinepay()"></input>
+                </div>
+            </div>
+        </div>
+
+        <p id="deliver_title" class="title"><img class="flaicon" src="./img/favicon.png"></img>|寄送方式|</i></p>
+        <div id="deliver_area" class="content_area">
+
+            <div id="del_face" class="deliver_method">
+                <div id="del_face_div" class="deliver_method_div">
+                    <img id="img_face" src="./img/order/del_face.png"></img>
+                    <div id="face_content" class="del_content">
+                        <sapn class="out_title_del">《面交》</sapn>
+                    </div>
+                    <input id="btn_face" class="del_btn" type="button" value="更多詳情" onclick="openFace()"></input>
+                </div>
+                <div id="del_face_bigdiv" class="deliver_method_bigdiv">
+                    <img src="./img/order/del_face.png"></img>
+                    <div>
+                        <p><span class="notice">主要面交地點：</span></p>
+                        <table>
+                            <tr>
+                                <th class="tayuanStation">台中市太原車站</th>
+                                <th class="beitubOffice">台中市北屯區公所</th>
+                            </tr>
+                            <tr>
+                                <th><img src="./img/order/map_01.png" alt=""></th>
+                                <th><img src="./img/order/map_02.png" alt=""></th>
+                            </tr>
+                            <tr>
+                                <th class="tayuanStation">地址:臺中市北屯區北興里東光路665號</th>
+                                <th class="beitubOffice">地址:台中市北屯區崇德路三段10號</th>
+
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span class="notice">＊台中市北區其他地點也可以斟酌外送，歡迎私訊詢問喔＊</span></th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span class="notice">＊台中市其他區域位置如需外送，會酌收工本費，歡迎詢價＊</span></th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span class="notice">＊外縣市一律為<span
+                                            class="black_cat">黑貓冷藏宅配</span>，注意事項請詳閱<span
+                                            class="label">｜注意事項｜</span>裡的<span class="label">｜訂單問題｜</span>喔！＊</span>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <input id="btn_face_big" class="del_btn" type="button" value="返回" onclick="closeFace()"></input>
+                </div>
+                <div id="del_del_bigdiv" class="deliver_method_bigdiv">
+                    <img src="./img/order/del_cat.png"></img>
+                    <div>
+                        <p class="notice">本工作室採用<span class="black_cat">黑貓宅急便</span>進行宅配，商品可分為冷藏或常溫寄送。</p>
+                        <sapn class="next_title">▶運費計算方式如下（取自<a
+                                href="https://www.t-cat.com.tw/inquire/timesheet3.aspx" target="_blank">黑貓</a>官網）</sapn>◀<br>
+                        <table>
+                            <tr style="background-color:rgb(190, 190, 0)">
+                                <th>包裹尺寸</th>
+                                <th colspan="2">小於60cm</th>
+                                <th colspan="2">61~90cm</th>
+                                <th colspan="2">91~120cm</th>
+                                <th colspan="2">121~150cm</th>
+                            </tr>
+                            <tr style="background-color:rgb(234, 234, 109)">
+                                <th>寄往</th>
+                                <th>本島</th>
+                                <th>離島</th>
+                                <th>本島</th>
+                                <th>離島</th>
+                                <th>本島</th>
+                                <th>離島</th>
+                                <th>本島</th>
+                                <th>離島</th>
+
+                            </tr>
+                            <tr>
+                                <th>常溫</th>
+                                <th>NT$130</th>
+                                <th>NT$220</th>
+                                <th>NT$170</th>
+                                <th>NT$280</th>
+                                <th>NT$210</th>
+                                <th>NT$320</th>
+                                <th>NT$250</th>
+                                <th>NT$360</th>
+                            </tr>
+                            <tr>
+                                <th>冷藏</th>
+                                <th>NT$160</th>
+                                <th>NT$260</th>
+                                <th>NT$225</th>
+                                <th>NT$340</th>
+                                <th>NT$290</th>
+                                <th>NT$400</th>
+                                <th colspan="2">暫不提供</th>
+
+                            </tr>
+                        </table>
+
+                    </div>
+                    <input id="btn_del_big" class="del_btn" type="button" value="返回" onclick="closeDeliver()"></input>
+                </div>
+
+
+            </div>
+            <div id="del_del" class="deliver_method">
+                <div id="del_del_div" class="deliver_method_div">
+                    <img id="img_del" src="./img/order/del_cat.png"></img>
+                    <div id="del_content" class="del_content">
+                        <sapn class="out_title_del">《宅配》</sapn>
+                    </div>
+                    <input id="btn_del" class="del_btn" type="button" value="更多詳情" onclick="openDeliver()"></input>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------------------Footer area------------------------------------------->
+        <div class="footer">
+
+            <p class="f_title"><span id="title_1">Hsieh</span> ♓ <span id="title_2">Hsieh</span></p>
+
+            <a href="https://www.facebook.com/HsiehHsieh-108923521593560/" target="_blank"><i
+                    class="fa-brands fa-facebook-square"></i></a>
+            <a href="https://line.me/ti/g2/v8JH-3USf5DPGvZBbT0TdYdVOtuKndpJ_F11Qw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                target="_blank"><i class="fa-brands fa-line"></i></a>
+            <a href="https://www.instagram.com/hsiehhsiehbrownie/" target="_blank"><i
+                    class="fa-brands fa-instagram-square"></i></a>
+        <!---------------------------Sign area------------------------------------------------------------>
+
+            <footer> Copyright © 2022 HsiehHsiehBrownie. All rights reserved.Designed by MariaLin</footer>
+
+
+
+        </div>
+        <!------------------------------Dialog area ------------------------------------------->
+
+        <div id="dialog_div" title="還有其他問題？歡迎來信詢問！" style="height:800px">
+            <!--title:設定dialog的標題-->
+            <p style='margin-bottom: 0px'><span class="con_title"><label for="id_text">請問如何稱呼您？</label></span><span
+                    class="necessary"> *必填</span></p>
+            <input id="id_text" type="text" class="dialog_textcls focus" placeholder="王大明、李小姐……等">
+            <p style="margin-top:8px;margin-bottom: 0px;"><span class="con_title">請問如何聯繫您？</span><span
+                    class="necessary">
+                    *必填</span></p>
+            <select id="connect">
+                <option value="co_select" disabled selected>請選擇聯絡方式</option>
+                <option value="co_line">LINE</option>
+                <option value="co_email">E-Mail</option>
+                <option value="co_facebook">Facebook</option>
+                <option value="co_tel">電話</option>
+                <option value="co_other">其他</option>
+            </select>
+            <input id="type_id" type="txet" class="dialog_textcls focus">
+            <p style="margin-top:8px;"><span class="con_title "><label for="type_content">請輸入您的問題？</label></span><span
+                    class="necessary"> *必填</span>
+            </p>
+            <textarea class="focus" id="type_content" rows="5" name="type_content" cols="40"></textarea>
+            <!--typearae:可以自動換行的對話框。可用rows跟cols來設定寬高-->
+        </div>
+
+         <!-------------------------------Slide-Car area----------------------------------------------------------->
+    <div id="slide_buycart">
+        <i class="fa-solid fa-circle-xmark" onclick="closebuycar()"></i>
+        <div id='slide_buycart_title' class="slide_buycart_title">
+            　|您的購物清單|
+        </div>
+        <div id='slide_buycart_content' class="slide_buycart_content">
+            <nav id='slide_buycart_goods'></nav>
+        </div>
+
+        <div id='slide_buycart_bottom' class="slide_buycart_bottom">
+            <hr>
+            <p id="totalCount" class="hide">0</p>
+            <p class="slide_buycart_total">總計 NT$<span id="slide_buycart_accounttotal">0</span></p>
+            <a href="./buycar.html"><button id="slide_buycart_bottom_btn">立即結帳</button></a>
+
+            
+        </div>
+
+    </div>
+</body>
+
+</html>

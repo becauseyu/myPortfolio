@@ -1,0 +1,64 @@
+@media screen and (max-width: 1270px) {
+    .payment_method{
+        float:none;
+        width: 80%;
+        height: 450px;
+        margin: 0 auto;
+        
+    }
+
+    .payment_method_bigdiv{
+        overflow: scroll;
+    }
+
+    .payment_method_bigdiv div{
+        width:60%;
+    }
+
+    .payment_method_bigdiv img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .payment_method_bigdiv input {
+        margin-left: -50px;
+        margin-top: 10px;
+        
+    }
+
+    .deliver_method{
+        float:none;
+        width: 80%;
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    .deliver_method_bigdiv{
+        overflow:scroll
+
+    }
+
+    .deliver_method_bigdiv div{
+        width:60%
+    }
+
+    .deliver_method_bigdiv img{
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .deliver_method_bigdiv input {
+        margin-left: -50px;
+        margin-top: 10px;
+        
+    }
+
+    .deliver_method_bigdiv div th img{
+        width:80%;
+        height: 10%;
+    }
+
+
+
+}

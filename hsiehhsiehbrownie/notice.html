@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注意事項| Hsieh Hsieh Brownie|布朗尼專賣</title>
+    <script src="https://kit.fontawesome.com/587cbd6750.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive_main.css">
+    <link rel="stylesheet" href="./css/notice.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="./_js/main.js"></script>
+    <script src="./_js/notice.js"></script>
+
+
+</head>
+
+<body>
+    <!------------------------------Header area ------------------------------------------->
+    <header>
+        <a href="./index.html"><img id='big_logo' src="./img/LOGO.png" width="300 px" height="300px"></a>
+    </header>
+    <!------------------------------Navbar area ------------------------------------------->
+
+    <div id="header">
+        <a href="./index.html"><img id='logo' src="./img/LOGO.png" width="120px" height="120px"></a>
+
+        <div class=navbar data-role="navbar">
+            <!--navbar:導覽列-->
+            <UL class="nav_link">
+                <li><a href="./about.html">|關於HsieHsieh|</a>
+                    <ul>
+                        <li><a href="./about.html#abouther">闆娘的故事|Story</a></li>
+                        <li><a href="./about.html#ingridient">嚴選材料|Ingridient</a></li>
+                    </ul>
+                </li>
+                <li><a href="./menu.html">&nbsp;&nbsp;&nbsp;|甜點項目|&nbsp;&nbsp;&nbsp;</a>
+
+                </li>
+                <li><a href="./order.html">&nbsp;|如何購買|&nbsp;</a>
+                    <ul>
+                        <li><a href='./order.html#payment_title'>付款方式|Payment</a></li>
+                        <li><a href='./order.html#deliver_title'>寄送方式|Deliver</a></li>
+                    </ul>
+                </li>
+                <li><a href="./notice.html">&nbsp;|注意事項|&nbsp;</a>
+                    <ul>
+                        <li><a href='#save'>&nbsp;保存|Save</a></li>
+                        <li><a href='#QandA'>&nbsp;訂單問題|Q&A</a></li>
+                    </ul>
+                </li>
+            </UL>
+
+        </div>
+        <!------------------------------Right-navbar area ------------------------------------------->
+        <div class="right_navbar">
+            <div class="message">
+                <i class="fa-solid fa-envelope" id="right_icon_message"></i>
+                <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+            </div>
+
+            <div class="buy_list">
+                <i class="fa-solid fa-cart-shopping" id="right_icon" onclick="openbuycar()"></i></a>
+                <span id='cartQuantity' class="cartQuantity text-white ">0</span>
+            </div>
+
+            <div class="search">
+                <form action="/action_page.php">
+                    <label for="search_text"><i class="fa-solid fa-magnifying-glass" id="right_icon"></i></label>
+                    <input id="search_text" class="input-field" type="text" placeholder="輸入想搜尋的產品" name="search">
+                    <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="blank_area">
+
+    </div>
+
+    <div id="content">
+        <p class="title"><img class="flaicon" src="./img/favicon.png"></img>|注意事項|</i></p>
+        <div id="save" class='label_html'>
+            <h3>保存與食用攻略|SAVE <img style="height: 30px ;width:30px;" src="./img/icon/mixer_icon.gif"></h3>
+            <input type="button" id="btn_brownie" onclick="change_brownie()" value="布朗尼"></input>
+            <input type="button" id="btn_madeleine" onclick="change_madeleine()" value="瑪德蓮"></input>
+            <input type="button" id="btn_basque" onclick="change_basque()" value="巴斯克"></input>
+            <input type="button" id="btn_fudge_cookie" onclick="change_fudge_cookie()" value="軟餅乾"> </input>
+            <input type="button" id="btn_cookie" onclick="change_cookie()" value="港式曲奇"></input>
+            <div id="payment_content" class="label_content">
+                <table id="sav_orign" class="sav_content">
+                    <td>
+                    <th>
+                        <img class="title_icon" src="./img/notice/brownie.png">
+                    </th>
+                    <th>
+                        <h4>布朗尼</h4>
+                        <p>賞味期限：冷藏3天。冷凍7天</p>
+                        <span class='method'>食用攻略：</span><br>
+                        <span class='method_title'>√冰著吃：</span>
+                        <br>
+                        口感似生巧克力，入口即化。 <br>
+                        <span class='method_title'>√常溫吃： </span><br>
+                        退冰後微濕口感，介於蛋糕與生巧之間。<br>
+                        <span class='method_title'>√熱熱吃： </span><br>
+                        微波：約20～25秒，熔岩蛋糕感 <br>
+                        氣炸／烤箱：<br>
+                        170度約3分鐘，脆皮帶點熔岩夾心<br><br>
+                    </th>
+                    </td>
+                </table>
+
+                <table id="sav_brownie" class="sav_content">
+                    <td>
+                    <th>
+                        <img class="title_icon" src="./img/notice/brownie.png">
+                    </th>
+                    <th>
+                        <h4>布朗尼</h4>
+                        <p>賞味期限：冷藏3天。冷凍7天</p>
+                        <span class='method'>食用攻略：</span><br>
+                        <span class='method_title'>√冰著吃：</span><br>
+                        口感似生巧克力，入口即化。 <br>
+                        <span class='method_title'>√常溫吃： </span><br>
+                        退冰後微濕口感，介於蛋糕與生巧之間。<br>
+                        <span class='method_title'>√熱熱吃： </span><br>
+                        微波：約20～25秒，熔岩蛋糕感 <br>
+                        氣炸／烤箱：<br>
+                        170度約3分鐘，脆皮帶點熔岩夾心<br><br>
+                    </th>
+                    </td>
+                </table>
+
+                <table id="sav_madeleine" class="sav_content">
+                    <td>
+                    <th>
+                        <img src="./img/notice/madernine.png" class="title_icon">
+                    </th>
+                    <th>
+                        <h4>瑪德蓮</h4>
+                        <p>賞味期限：常溫7天。冷凍14天</p>
+                        <span class='method'>食用攻略：</span><br>
+                        <span class='method_title'>√常溫吃：</span><br>
+                        常溫食用最好吃，蛋糕體香味十足。<br>
+                        <span class="notice">（退冰後到常溫一樣好吃喔）</span><br>
+                        <span class='method_title'>>√熱熱吃：</span<br>
+                            氣炸／烤箱：<br>
+                            烤箱150度預熱後，150度約5分鐘。<br>
+                            闆娘最愛，外酥內軟。<br>
+                            <span class="notice"> ＊如有加購鏡面不建議加熱。</span>
+                            <br><br>
+
+                    </th>
+                    </td>
+                </table>
+
+                <table id="sav_basque" class="sav_content">
+                    <td>
+                    <th>
+                        <img src="./img/notice/basque.png" class="title_icon">
+                    </th>
+                    <th>
+                        <h4>巴斯克</h4>
+                        <p>賞味期限：冷藏3天。冷凍7天</p>
+                        <span class='method'>食用攻略：</span><br>
+                        <span class='method_title'>√冰著吃：</span><br>
+                        冷藏拿出最美吃，甜度香氣口感最平衡<br>
+                        <span class='method_title'>√凍著吃：</span><br>
+                        冷凍庫出來直接切<span class="notice">（稍微加熱一下刀體更好切）</span><br>
+                        似是吃著整塊乳酪，奶香十足<br>
+                        <span class='method_title'>√常溫吃：</span><br>
+                        怕寒想要放常溫，當然也歡迎<br>
+                        稍微放軟的乳酪增添了一絲風味<br>
+
+
+
+                    </th>
+                    </td>
+                </table>
+
+                <table id="sav_fudge_cookie" class="sav_content">
+                    <td>
+                    <th>
+                        <img src="./img/notice/fudge_cookie.png" class="title_icon">
+                    </th>
+                    <th>
+                        <h4>軟餅乾</h4>
+                        <p>賞味期限：常溫3天。冷凍14天</p>
+                        <span class='method'>食用攻略：</span><br>
+                        <span class='method_title'>√熱熱吃：</span> <br>
+                        先退冰到常溫。<br>
+                        氣炸／烤箱：<br>
+                        180度約2分鐘。<br>
+                        餅乾外衣微微酥脆<br>
+                        棉花糖夾心牽絲香甜<br>
+                        <br><br><br>
+
+                    </th>
+                    </td>
+                </table>
+
+                <table id="sav_cookie" class="sav_content">
+                    <td>
+                    <th>
+                        <img src="./img/notice/cookie.png" class="title_icon">
+                    </th>
+                    <th>
+                        <h4>港式曲奇</h4>
+                        <p>賞味期限：常溫14天</p>
+                        <span class='method'>食用攻略：</span><br>
+                        <span class="notice">理想狀態在五日內食用完畢</span><br>
+                        入口極化的奶油香<br>
+                        令人欲罷不能<br><br><br><br><br><br><br>
+
+                    </th>
+                    </td>
+                </table>
+
+
+
+            </div>
+
+        </div>
+        <br><br><br><br><br>
+        <div id="QandA" class='label_html'>
+            <h3>訂單問題|Q&A <img style="height: 30px ;width:30px;" src="./img/icon/knife_icon.gif"></h3>
+            <input type="button" id="btn_order" onclick="change_order()" value="訂購問題"></input>
+            <input type="button" id="btn_transfer" onclick="change_transfer()" value="匯款問題"></input>
+            <input type="button" id="btn_deliver" onclick="change_deliver()" value="出單問題"></input>
+            <div id="deliver_content" class="label_content">
+                <div id="del_orign">
+                    <p>♪訂購請私訊
+                        <a href="https://www.instagram.com/hsiehhsiehbrownie/" style="color:#c13584;"
+                            target="_blank">IG</a>
+                        /
+                        <a href="https://www.facebook.com/HsiehHsieh-108923521593560/" style="color:#1877f2 ;"
+                            target="_blank">FB</a>
+                        小盒子，或是點選
+                        <span style="color:rgb(36, 127, 180) ;">右上角
+                            <i class="fa-solid fa-envelope" onclick="openDialog()"></i>
+                        </span>傳送信件♪
+                    </p>
+                    <p>♪填妥送出後，<span style="text-decoration:underline;" class="notice">請靜待闆娘聯繫</span>，確認訂購成功後再匯款或排單♪</p>
+                    <p>♪因闆娘還有其他正職工作，故回覆需<span style="text-decoration:underline;" class="notice">1~3</span>個工作天♪</p>
+                    <p>♪個人工作室不接急單，敬請見諒♪</p>
+                    <p> 訂購請提供以下資訊：</p>
+                    <table class="order_content">
+                        <tr>
+                            <th>訂購者姓名</th>
+                            <th colspan="2"><span class="example">(謝饅頭)</span></th>
+                        </tr>
+                        <tr>
+                            <th>欲取貨日期</th>
+                            <th colspan="2"><span class="example">(2022/06/24)</span></th>
+                        </tr>
+                        <tr>
+                            <th>欲取貨時間</th>
+                            <th colspan="2"><span class="example">(下午３點)</span></th>
+                        </tr>
+                        <tr>
+                            <th>聯絡電話</th>
+                            <th colspan="2"><span class="example">(0987654321)</span></th>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">訂購內容</th>
+
+                        </tr>
+                        <tr>
+                            <th>品項：</th>
+                            <th><span class="example">(巴斯克)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>規格：</th>
+                            <th><span class="example">(五吋)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>口味：</th>
+                            <th><span class="example">(純粹焦香)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>數量：</th>
+                            <th><span class="example">(1)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>運送方式：</th>
+                            <th colspan="2"><span class="example">(北屯區自取)</span></th>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+                <div id="del_order">
+                    <p>♪訂購請私訊
+                        <a href="https://www.instagram.com/hsiehhsiehbrownie/" style="color:#c13584;"
+                            target="_blank">IG</a>
+                        /
+                        <a href="https://www.facebook.com/HsiehHsieh-108923521593560/" style="color:#1877f2 ;"
+                            target="_blank">FB</a>
+                        小盒子，或是點選
+                        <span style="color:rgb(36, 127, 180) ;">右上角
+                            <i class="fa-solid fa-envelope" onclick="openDialog()"></i>
+                        </span>傳送信件♪
+                    </p>
+                    <p>♪填妥送出後，<span style="text-decoration:underline;" class="notice">請靜待闆娘聯繫</span>，確認訂購成功後再匯款或排單♪</p>
+                    <p>♪因闆娘還有其他正職工作，故回覆需<span style="text-decoration:underline;" class="notice">1~3</span>個工作天♪</p>
+                    <p>♪個人工作室不接急單，敬請見諒♪</p>
+                    <p> 訂購請提供以下資訊：</p>
+                    <table class="order_content">
+                        <tr>
+                            <th>訂購者姓名</th>
+                            <th colspan="2"><span class="example">(謝饅頭)</span></th>
+                        </tr>
+                        <tr>
+                            <th>欲取貨日期</th>
+                            <th colspan="2"><span class="example">(2022/06/24)</span></th>
+                        </tr>
+                        <tr>
+                            <th>欲取貨時間</th>
+                            <th colspan="2"><span class="example">(下午３點)</span></th>
+                        </tr>
+                        <tr>
+                            <th>聯絡電話</th>
+                            <th colspan="2"><span class="example">(0987654321)</span></th>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">訂購內容</th>
+
+                        </tr>
+                        <tr>
+                            <th>品項：</th>
+                            <th><span class="example">(巴斯克)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>規格：</th>
+                            <th><span class="example">(五吋)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>口味：</th>
+                            <th><span class="example">(純粹焦香)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>數量：</th>
+                            <th><span class="example">(1)</span></th>
+
+                        </tr>
+                        <tr>
+                            <th>運送方式：</th>
+                            <th colspan="2"><span class="example">(北屯區自取)</span></th>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+                <div id="del_transfer">
+                    <p>♪匯款請於訂單成立後<span style="text-decoration:underline;" class="notice">五日內</span>匯款完成♪</p>
+                    <p>♪匯款後請主動告知<span style="text-decoration:underline;" class="notice">匯款人大名</span>與<span
+                            style="text-decoration:underline;" class="notice">帳戶後五碼</span>♪</p>
+                    <p>♪選擇面交者，訂單金額若<span style="text-decoration:underline;">超過1000元</span>，須預付<span
+                            class="notice">三成</span>訂金♪</p>
+                    <p>♪臨櫃匯款者請附上劃撥單據♪</p>
+                    <p>♪<span class="notice">確認收到匯款後才算訂購完成喔</span>♪</p>
+                    <p>匯款帳號：</p>
+                    <table class="order_content">
+                        <tr>
+                            <th>國泰世華(013)</th>
+                            <th>0000-0000-0000</th>
+                        </tr>
+                        <tr>
+                            <th>玉山銀行(808)</th>
+                            <th>1111-1111-1111</th>
+                        </tr>
+                        <tr>
+                            <th>台新銀行(812)</th>
+                            <th>2222-2222-2222</th>
+                        </tr>
+                        <tr>
+                            <th>中國信託(822)</th>
+                            <th>3333-3333-3333</th>
+                        </tr>
+
+                    </table><br>
+
+                </div>
+                <div id="del_deliver">
+                    <p>♪訂單依照<span class="notice">下單時間順序</span>排單♪</p>
+                    <p>♪確切的取貨時間依照訂單量決定♪</p>
+                    <p>♪建議<span class="notice">先私訊確認</span>，再進行下單♪</p>
+                    <p></p>
+                    <table class="order_content">
+                        <tr>
+                            <th>面交自取</th>
+                        </tr>
+                        <tr>
+                            <th style="text-align:left">
+                                <ul>
+                                    <li>✦若於<span class="notice">約定時間20分鐘內</span>未出現者，<span
+                                            style="text-decoration:underline;background-color: yellow;">則視為棄單。</span>
+                                    </li>
+                                    <li>✦若已收訂金，<span
+                                            style="text-decoration:underline;background-color: yellow;">將全部沒收</span>；
+                                        且會<span class="notice">將訂購人的資訊公告在相關社團的黑名單</span>；之後也不能再以自取方式購買商品。</li>
+                                </ul>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>冷藏宅配</th>
+                        </tr>
+                        <tr>
+                            <th style="text-align:left">
+                                本店選擇<span id="black_cat">　黑貓宅急便　</span>寄送宅配部分<br>
+                                <span id="veryImportant">以下幾項聲明請先詳閱，如未能全部同意，<span
+                                        class="notice">請勿選擇</span>宅配方式</span><br>
+                                <ul>
+                                    <li>
+                                        ✦黑貓聲明：<br>
+                                        針對運送蛋糕，可能會因行車晃動、貨物堆疊等等理由，造成商品位移或毀損。<br>
+                                        針對毀損部分，<span class="notice">他們將不會做賠償。</span>
+
+                                    </li>
+                                    <li>
+                                        ✦店家聲明：<br>
+                                        對於商品我們一定會做加強防護，但還是有機率性可能因為運送過程的突發狀況，造成商品毀損。
+
+                                    </li>
+                                    <li>
+                                        ✦毀損商品應對：<br>
+                                        當您收到商品時，<span class="notice"
+                                            style="text-decoration:underline;">務必於第一時間錄影完整開箱過程。</span><br>
+                                        若商品是因為我方包裝不確實而導致毀損，必定會進行賠償商品或訂單退款。<br>
+                                        若商品是因為宅配公司運送毀損，很遺憾我們無法進行賠償，但能協助將狀況轉達給宅配公司了解。
+                                    </li>
+                                </ul>
+                            </th>
+                        </tr>
+                    </table>
+                    <br>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!------------------------------Footer area------------------------------------------->
+        <div class="footer">
+
+            <p class="f_title"><span id="title_1">Hsieh</span> ♓ <span id="title_2">Hsieh</span></p>
+
+            <a href="https://www.facebook.com/HsiehHsieh-108923521593560/" target="_blank"><i
+                    class="fa-brands fa-facebook-square"></i></a>
+            <a href="https://line.me/ti/g2/v8JH-3USf5DPGvZBbT0TdYdVOtuKndpJ_F11Qw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                target="_blank"><i class="fa-brands fa-line"></i></a>
+            <a href="https://www.instagram.com/hsiehhsiehbrownie/" target="_blank"><i
+                    class="fa-brands fa-instagram-square"></i></a>
+        <!---------------------------Sign area------------------------------------------------------------>
+
+            <footer> Copyright © 2022 HsiehjsiehBrownie. All rights reserved.Designed by MariaLin</footer>
+
+
+        </div>
+        <!------------------------------Dialog area ------------------------------------------->
+
+        <div id="dialog_div" title="還有其他問題？歡迎來信詢問！" style="height:800px">
+            <!--title:設定dialog的標題-->
+            <p style='margin-bottom: 0px'><span class="con_title"><label for="id_text">請問如何稱呼您？</label></span><span
+                    class="necessary"> *必填</span></p>
+            <input id="id_text" type="text" class="dialog_textcls focus" placeholder="王大明、李小姐……等">
+            <p style="margin-top:8px;margin-bottom: 0px;"><span class="con_title">請問如何聯繫您？</span><span
+                    class="necessary">
+                    *必填</span></p>
+            <select id="connect">
+                <option value="co_select" disabled selected>請選擇聯絡方式</option>
+                <option value="co_line">LINE</option>
+                <option value="co_email">E-Mail</option>
+                <option value="co_facebook">Facebook</option>
+                <option value="co_tel">電話</option>
+                <option value="co_other">其他</option>
+            </select>
+            <input id="type_id" type="txet" class="dialog_textcls focus">
+            <p style="margin-top:8px;"><span class="con_title "><label for="type_content">請輸入您的問題？</label></span><span
+                    class="necessary"> *必填</span>
+            </p>
+            <textarea class="focus" id="type_content" rows="5" name="type_content" cols="40"></textarea>
+            <!--typearae:可以自動換行的對話框。可用rows跟cols來設定寬高-->
+        </div>
+
+         <!-------------------------------Slide-Car area----------------------------------------------------------->
+    <div id="slide_buycart">
+        <i class="fa-solid fa-circle-xmark" onclick="closebuycar()"></i>
+        <div id='slide_buycart_title' class="slide_buycart_title">
+            　|您的購物清單|
+        </div>
+        <div id='slide_buycart_content' class="slide_buycart_content">
+            <nav id='slide_buycart_goods'></nav>
+        </div>
+
+        <div id='slide_buycart_bottom' class="slide_buycart_bottom">
+            <hr>
+            <p id="totalCount" class="hide">0</p>
+            <p class="slide_buycart_total">總計 NT$<span id="slide_buycart_accounttotal">0</span></p>
+            <a href="./buycar.html"><button id="slide_buycart_bottom_btn">立即結帳</button></a>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>您的購物車| Hsieh Hsieh Brownie|布朗尼專賣</title>
+    <script src="https://kit.fontawesome.com/587cbd6750.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/buycar.css">
+    <link rel="stylesheet" href="./css/responsive_main.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="./_js/jquery.min.js"></script>
+    <script src="./_js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="./_js/main.js"></script>
+    <script src="./_js/buycar.js"></script>
+
+
+
+</head>
+
+<body>
+    <!--------------------------BIG LOGO area------------------------------------------------------------>
+    <header>
+        <a href="./index.html"><img id='big_logo' src="./img/LOGO.png" width="300 px" height="300px"></a>
+    </header>
+    <!--------------------------Navbar area------------------------------------------------------------>
+    <div id="header">
+        <a href="./index.html"><img id='logo' src="./img/LOGO.png" width="120px" height="120px"></a>
+
+        <div class=navbar data-role="navbar">
+            <!--navbar:導覽列-->
+            <UL class="nav_link">
+                <li><a href="./about.html">|關於HsieHsieh|</a>
+                    <ul>
+                        <li><a href="#abouther">闆娘的故事|Story</a></li>
+                        <li><a href="#ingridient">嚴選材料|Ingridient</a></li>
+                    </ul>
+                </li>
+                <li><a href="./menu.html">&nbsp;&nbsp;&nbsp;|甜點項目|&nbsp;&nbsp;&nbsp;</a>
+
+                </li>
+                <li><a href="./order.html">&nbsp;|如何購買|&nbsp;</a>
+                    <ul>
+                        <li><a href='./order.html#payment_title'>付款方式|Payment</a></li>
+                        <li><a href='./order.html#deliver_title'>寄送方式|Deliver</a></li>
+                    </ul>
+                </li>
+                <li><a href="./notice.html">&nbsp;|注意事項|&nbsp;</a>
+                    <ul>
+                        <li><a href='./notice.html#save'>&nbsp;保存|Save</a></li>
+                        <li><a href='./notice.html#QandA'>&nbsp;訂單問題|Q&A</a></li>
+                    </ul>
+                </li>
+            </UL>
+
+        </div>
+
+        <!--------------------------Right-Navbar area------------------------------------------------------>
+
+        <div class="right_navbar">
+            <div class="message">
+                <i class="fa-solid fa-envelope" id="right_icon_message"></i>
+                <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+            </div>
+
+            <div class="buy_list">
+                <i class="fa-solid fa-cart-shopping" id="right_icon" onclick="openbuycar()"></i></a>
+                <span id='cartQuantity' class="cartQuantity text-white ">0</span>
+            </div>
+
+            <div class="search">
+                <form action="/action_page.php">
+                    <label for="search_text"><i class="fa-solid fa-magnifying-glass" id="right_icon"></i></label>
+                    <input id="search_text" class="input-field" type="text" placeholder="輸入想搜尋的產品" name="search">
+                    <!--placeholder:比起value，使用placeholder所放入的文字，會在使用人打入文字時自動消失-->
+                </form>
+            </div>
+
+        </div>
+        <!--------------------------------------Blank_area------------------------------------------------------------>
+
+    </div>
+    <div id="blank_area">
+
+    </div>
+
+
+    <div id="content">
+        <p class="title"><img class="flaicon" src="./img/favicon.png"></img>您的購物車</i></p>
+        <table class="buycarList">
+            <thead>
+                <th>商品名稱</th>
+                <th>商品圖片</th>
+                <th>商品單價</th>
+                <th>商品數量</th>
+                <th>商品總計</th>
+                <th>刪除商品</th>
+
+            </thead>
+            <tbody id="buycarList">
+                <tr>
+                    <th></th>
+                    <th><img src="./img/menu/cheese_fudge_cookie.jpg"></th>
+                    <th>$<span class="goodsSinglePrice">100</span></th>
+                    <th><input class="goodsCount" type="number" value="1"></th>
+                    <th>$<span class="goodsTotal"></span></th>
+                    <th><input class="removeGoods" type="button" value="移除" onclick="removeGoods(this)"></th>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <th colspan="3">商品總數：<span id="totalAmount"></span></th>
+                <th colspan="3">總計＄<span id="totalPrice"></span></th>
+            </tfoot>
+
+        </table>
+
+        <p class="title"><img class="flaicon" src="./img/favicon.png"></img>訂購人資訊</i></p>
+        <table id="bottom_content">
+            <th>
+                <table class="orderData">
+                    <tr>
+                        <th>訂購人大名</th>
+                        <th colspan="2"><input type="text"></th>
+                    </tr>
+                    <tr>
+                        <th>訂購人電話</th>
+                        <th colspan="2"><input type="text"></th>
+                    </tr>
+                    <tr>
+                        <th>取件方式</th>
+                        <th>
+                            <select id="del_select" type="select">
+                                <option value="del_select" disabled selected>請選擇取件方式</option>
+                                <option value="del_face">面交</option>
+                                <option value="del_deliver">黑貓冷藏宅配</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select id="face_select">
+                                <option>請選擇要面交的地點</option>
+                                <option value="tayuan_st">台中市太原車站</option>
+                                <option value="batun_dist">台中市北屯區公所</option>
+                                <option value="face_other">其他(運費另計)</option>
+                            </select>
+                            <input id="del_address" type="text" placeholder="請輸入宅配地址">
+        
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>付款方式</th>
+                        <th>
+                            <select>
+                                <option value="pay_select" disabled selected>請選擇付款方式</option>
+                                <option value="pay_cash" id="pay_cash">現金</option>
+                                <option value="pay_transfer">匯款</option>
+                                <option value="pay_linepay">Linepay</option>
+                            </select>
+                        </th>
+        
+                    </tr>
+        
+                </table>
+            </th>
+
+            <th>
+                <table class="orderData">
+                    <tr>
+                        <th>訂單金額</th>
+                        <th>$<span id="goods_total"></span></th>
+                    </tr>
+                    <tr>
+                        <th >運費</th>
+                        <th>$<span id="del_fee"></span></th>
+                    </tr>
+                   
+                    <tr>
+                        <th></th>
+                        <th >訂單總計金額：$<span id="order_total">0</span></th>
+                    </tr>
+
+                </table>
+                <input id="order_submit" type="submit" value="送出訂單">
+            </th>
+        </table>
+
+
+        
+
+
+
+
+
+
+
+    </div>
+
+    <!--------------------------------------Footer area------------------------------------------------------------>
+
+
+    <div class="footer">
+
+        <p class="f_title"><span id="title_1">Hsieh</span> ♓ <span id="title_2">Hsieh</span></p>
+
+        <a href="https://www.facebook.com/HsiehHsieh-108923521593560/" target="_blank"><i
+                class="fa-brands fa-facebook-square"></i></a>
+        <a href="https://line.me/ti/g2/v8JH-3USf5DPGvZBbT0TdYdVOtuKndpJ_F11Qw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+            target="_blank"><i class="fa-brands fa-line"></i></a>
+        <a href="https://www.instagram.com/hsiehhsiehbrownie/" target="_blank"><i
+                class="fa-brands fa-instagram-square"></i></a>
+
+        <!---------------------------Sign area------------------------------------------------------------>
+
+        <footer> Copyright © 2022 HsiehHsiehBrownie. All rights reserved.Designed by MariaLin</footer>
+
+    </div>
+
+    <!---------------------------Dialog area------------------------------------------------------------>
+
+
+    <div id="dialog_div" title="還有其他問題？歡迎來信詢問！" style="height:800px">
+        <!--title:設定dialog的標題-->
+        <p style='margin-bottom: 0px'><span class="con_title"><label for="id_text">請問如何稱呼您？</label></span><span
+                class="necessary"> *必填</span></p>
+        <input id="id_text" type="text" class="dialog_textcls focus" placeholder="王大明、李小姐……等">
+        <p style="margin-top:8px;margin-bottom: 0px;"><span class="con_title">請問如何聯繫您？</span><span class="necessary">
+                *必填</span></p>
+        <select id="connect">
+            <option value="co_select" disabled selected>請選擇聯絡方式</option>
+            <option value="co_line">LINE</option>
+            <option value="co_email">E-Mail</option>
+            <option value="co_facebook">Facebook</option>
+            <option value="co_tel">電話</option>
+            <option value="co_other">其他</option>
+        </select>
+        <input id="type_id" type="txet" class="dialog_textcls focus">
+        <p style="margin-top:8px;"><span class="con_title "><label for="type_content">請輸入您的問題？</label></span><span
+                class="necessary"> *必填</span>
+        </p>
+        <textarea class="focus" id="type_content" rows="5" name="type_content" cols="40"></textarea>
+        <!--typearae:可以自動換行的對話框。可用rows跟cols來設定寬高-->
+    </div>
+
+    <!-------------------------------Slide-Car area----------------------------------------------------------->
+    <div id="slide_buycart">
+        <i class="fa-solid fa-circle-xmark" onclick="closebuycar()"></i>
+        <div id='slide_buycart_title' class="slide_buycart_title">
+            　|您的購物清單|
+        </div>
+        <div id='slide_buycart_content' class="slide_buycart_content">
+            <nav id='slide_buycart_goods'></nav>
+        </div>
+
+        <div id='slide_buycart_bottom' class="slide_buycart_bottom">
+            <hr>
+            <p id="totalCount" class="hide">0</p>
+            <p class="slide_buycart_total">總計 NT$<span id="slide_buycart_accounttotal">0</span></p>
+            <a href="./buycar.html"><button id="slide_buycart_bottom_btn">立即結帳</button></a>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

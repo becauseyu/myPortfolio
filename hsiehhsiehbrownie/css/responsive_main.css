@@ -1,0 +1,33 @@
+
+@media screen and (max-width: 900px) {
+
+    .right_navbar {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navbar {
+        clear: both;  /*clear:暫時中斷float的設定*/
+        float: none; 
+        height: 50px;
+        top: 0px;
+
+    }
+
+    .fixed-nav .navbar{
+        top: -50px;
+        height: 0px;
+        left: 100px;
+    
+    }
+
+    .nav_link {
+        flex-wrap: nowrap;
+    }
+
+
+
+}
+
+

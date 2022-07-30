@@ -1,0 +1,150 @@
+#blank_area {
+    height: 200px;
+    width: 100%;
+    background-color: white;
+}
+
+.fixed-nav #blank_area {
+    height: 180px;
+}
+
+/*==============================================*/
+#content {
+    width: 100%;
+    /* background-color: blueviolet; */
+    text-align: center;
+    font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+    /* height: px; */
+
+
+}
+
+#menu_content {
+    /* background-color: brown; */
+    padding: 10px;
+}
+
+.box_content {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.box {
+    /* display: grid; */
+    /* background-color: yellow; */
+    width: 330px;
+    height: 330px;
+    margin: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    position: relative;
+   
+}
+
+.box_img {
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 60px;
+    display: block;
+
+}
+
+.box_detail{
+    position: relative;
+    top: -200px;
+    padding: 10px;
+}
+
+.box_name{
+    font-size: 20px;    
+}
+
+
+.box_price{
+    font-size: 20px;
+}
+
+.over {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top: -200px;
+    left: 60px;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(198, 219, 255);
+}
+
+.over_text {
+    color: gray;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    width: 200px;
+    /* height: 150px; */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.over:hover {
+    opacity: 0.9;
+}
+
+.buy_now{
+    color: rgb(255, 94, 94);
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+}
+.buy_now:hover{
+    color: rgb(247, 12, 12);
+    
+}
+
+.box_brownie{
+    color: rgba(255, 75, 75, 0.858);
+}
+
+.box_madeleine{
+    color: rgb(163, 175, 57);
+
+}
+
+.box_basque{
+    color: rgb(232, 163, 44);
+
+}
+
+.box_fudge_cookie{
+    color: rgb(73, 219, 90);
+
+}
+
+.box_hkcookie{
+    color: rgb(73, 219, 207);
+
+}
+
+/*==============================================*/
+.select_btn {
+    background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+/*==============================================*/
+.hidden{
+    display: none;
+}
+
+
+
